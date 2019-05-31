@@ -13,7 +13,7 @@ task default: :spec
 task :preview do
   require 'rucaptcha'
 
-  res = RuCaptcha.create(1, 5, 1, 0)
+  res = RuCaptcha.create(1, 4, 0, 0)
   $stderr.puts res[0]
   puts res[1]
 end

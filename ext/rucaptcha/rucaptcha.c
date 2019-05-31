@@ -72,11 +72,15 @@ static int letter(int n, int pos, unsigned char im[70*200], unsigned char swr[20
     }
 
     if(sk1>=200) sk1=sk1%200;
-    int skew=sw[sk1]/16;
+    // int skew=sw[sk1]/16;
+    // 偏移程度
+    int skew=sw[sk1]/64;
     sk1+=(swr[pos+i-r]&0x1)+1;
 
     if(sk2>=200) sk2=sk2%200;
-    int skewh=sw[sk2]/70;
+    // int skewh=sw[sk2]/70;
+    // 扭曲程度
+    int skewh=sw[sk2]/140;
     sk2+=(swr[row]&0x1);
 
     unsigned char *x=i+skew*200+skewh;
